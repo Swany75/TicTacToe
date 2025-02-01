@@ -1,8 +1,9 @@
-# IMPORTS
+#!/usr/bin/python
+
 import os
 from random import randint
 
-# VARIABLES
+### CONSTANTS & VARIABLES #############################################################################
 
 board = {
     "a1": " ", "a2": " ", "a3": " ",
@@ -31,7 +32,7 @@ winning_combinations = [
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# FUNCTIONS
+### FUNCTIONS #########################################################################################
 
 def startAscii():
     print("""
@@ -47,11 +48,11 @@ def startAscii():
                                     - Juan Dalmau Santandreu | ASIX 2024 -
     """)
     input("\n\nPress any key to continue...")
-    clear
+    clear()
 
 def stopAscii(winner):
     
-    clear
+    clear()
             
     print(f"""
        ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ 
@@ -124,7 +125,7 @@ def selectPosition(player):
     
 def drawBoard(player):
     
-    clear
+    clear()
     
     print(f" ═════ {player} turn ════════════\n")
 
@@ -154,10 +155,12 @@ def check_winner():
     else: 
     
         return None
+
+### MAIN CODE #########################################################################################
     
 def main(): 
     
-    clear
+    clear()
     
     startAscii()
 
@@ -183,7 +186,7 @@ def main():
     
         player = "Nobody"
     
-    clear
+    clear()
     drawBoard("Final")
     input("\nPress any key to continue... ")
     
