@@ -28,6 +28,8 @@ winning_combinations = [
     
 ]
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # FUNCTIONS
 
@@ -45,11 +47,11 @@ def startAscii():
                                     - Juan Dalmau Santandreu | ASIX 2024 -
     """)
     input("\n\nPress any key to continue...")
-    os.system('cls')
+    clear
 
 def stopAscii(winner):
     
-    os.system('cls')
+    clear
             
     print(f"""
        ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ 
@@ -122,7 +124,7 @@ def selectPosition(player):
     
 def drawBoard(player):
     
-    os.system('cls')
+    clear
     
     print(f" ═════ {player} turn ════════════\n")
 
@@ -155,7 +157,7 @@ def check_winner():
     
 def main(): 
     
-    os.system('cls')
+    clear
     
     startAscii()
 
@@ -181,7 +183,7 @@ def main():
     
         player = "Nobody"
     
-    os.system('cls')
+    clear
     drawBoard("Final")
     input("\nPress any key to continue... ")
     
