@@ -29,10 +29,14 @@ winning_combinations = [
     
 ]
 
+### FUNCTIONS #########################################################################################
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-### FUNCTIONS #########################################################################################
+def pressToContinue():
+    input("\nPress any key to continue >>>")
+    clear()
 
 def startAscii():
     print("""
@@ -47,13 +51,10 @@ def startAscii():
     
                                     - Juan Dalmau Santandreu | ASIX 2024 -
     """)
-    input("\n\nPress any key to continue...")
-    clear()
+    pressToContinue()
 
 def stopAscii(winner):
-    
-    clear()
-            
+                
     print(f"""
        ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ 
       ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ 
@@ -188,7 +189,7 @@ def main():
     
     clear()
     drawBoard("Final")
-    input("\nPress any key to continue... ")
+    pressToContinue()
     
     stopAscii(player)
         
